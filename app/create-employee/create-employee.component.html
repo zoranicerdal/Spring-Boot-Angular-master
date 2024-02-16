@@ -1,0 +1,27 @@
+<div class="col-md-6 offset-md-3">
+<h3> Dodaj Radnika </h3>
+<form (ngSubmit) = "onSubmit()">
+
+
+<div class="form-group">
+    <label> Ime </label>
+    <input type="text" class="form-control" id = "firstName"
+        [(ngModel)] = "employee.firstName" name = "firstName"> 
+</div>
+
+<div class="form-group">
+    <label> Prezime </label>
+    <input type="text" class="form-control" id = "lastName"
+        [(ngModel)] = "employee.lastName" name = "lastName"> 
+</div>
+
+<div class="form-group">
+    <label> Email </label>
+    <input type="text" class="form-control" id = "emailId"
+        [(ngModel)] = "employee.emailId" name = "emailId"> 
+</div>
+
+<button class="btnEki" type="submit" style="margin-left: 280px; text-align: center; margin-top: 15px;">Dodaj</button>
+
+</form>
+</div>

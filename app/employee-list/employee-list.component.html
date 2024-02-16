@@ -1,0 +1,23 @@
+<h2 style="width: max-content; margin: 0 auto;"> Lista radnika </h2>
+    <table class="tableEki" style="width: max-content; margin: 0 auto;">
+        <thead>
+            <tr>
+                <th> Ime </th>
+                <th> Prezime </th>
+                <th> Email </th>
+                <th style="text-align: center;" > Action </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let employee of employees" class="active-row">
+                <td> {{ employee.firstName }} </td>
+                <td> {{ employee.lastName }} </td>
+                <td> {{ employee.emailId }} </td>
+                <td>    
+                    <button (click) = "updateEmployee(employee.id)" class = "btnEki" style="margin-left: 10px; text-align: center;"> Ažuriraj </button>
+                    <button (click) = "deleteEmployee(employee.id)" class = "btnEki2" style="margin-left: 10px; text-align: center;"> Obriši </button>
+                    <button (click) = "employeeDetails(employee.id)" class = "btnEki" style="margin-left: 10px; text-align: center;"> Pregled </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
